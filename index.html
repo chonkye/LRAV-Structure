@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>LRAV Organizational Structure</title>
 
+
 <style>
 
 :root{
@@ -372,6 +373,36 @@ h1{
 /* =====================================
    RESPONSIVE 
 ===================================== */
+/* =====================================
+   PDF / PRINT FIX
+===================================== */
+
+@media print {
+
+    .flip-card{
+        perspective:none !important;
+    }
+
+    .flip-card-inner{
+        transform:none !important;
+        transform-style:flat !important;
+    }
+
+    .flip-card-front{
+        position:relative !important;
+        transform:none !important;
+        backface-visibility:visible !important;
+    }
+
+    .flip-card-back{
+        display:none !important;
+    }
+
+    body{
+        zoom:0.85;
+    }
+
+}
 
 @media(max-width:1700px){
 
@@ -831,7 +862,7 @@ h1{
                     <!-- WAREHOUSE 1 BRANCH -->
                     <div class="branch-group">
 
-                        <div class="flip-card filled-card small" onclick="flipCard(this)">
+                        <div class="flip-card filled-card medium" onclick="flipCard(this)">
                             <div class="number">18</div>
                             <div class="top-strip"></div>
                             <div class="flip-card-inner">
@@ -882,7 +913,7 @@ h1{
                                 </div>
                             </div>
 
-                            <div class="flip-card mystery-card small" onclick="flipCard(this)">
+                            <div class="flip-card freelance-card small" onclick="flipCard(this)">
                                 <div class="number">30</div>
                                 <div class="top-strip"></div>
                                 <div class="flip-card-inner">
@@ -891,6 +922,7 @@ h1{
                                         <div class="subtitle">Associate</div>
                                         <div class="tags">
                                             <span class="tag open">Open Role</span>
+                                            <span class="tag freelance">Freelance Eligible</span>
                                         </div>
                                     </div>
                                     <div class="flip-card-back">
@@ -930,6 +962,9 @@ h1{
                                     <div class="flip-card-front">
                                         <div class="title">Driver 2</div>
                                         <div class="subtitle">Transport</div>
+                                        <div class="tags">
+                                            <span class="tag freelance">Freelance Eligible</span>
+                                        </div>
                                     </div>
                                     <div class="flip-card-back">
                                         <h3>Jaii Cancel</h3>
